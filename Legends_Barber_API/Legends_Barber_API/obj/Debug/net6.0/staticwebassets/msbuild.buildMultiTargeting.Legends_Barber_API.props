@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\build\Legends_Barber_API.props" />
+</Project>

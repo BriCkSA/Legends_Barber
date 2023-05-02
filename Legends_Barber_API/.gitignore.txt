@@ -1,0 +1,64 @@
+# .NET Build Output
+bin/
+obj/
+
+# .NET Core Tools
+.project.json
+.project.pbxproj
+*.userprefs
+.vscode/
+
+# Visual Studio files
+*.suo
+*.user
+*.psess
+*.vsp
+*.vshost.*
+*.obj
+*.cache
+*.ncrunch*
+*_i.c
+*_p.c
+*.ilk
+*.meta
+*.log
+*.tlog
+*.diff
+*.dll
+*.pdb
+*.zip
+*.exe
+*.pch
+*.idb
+*.~*
+*.resx
+*.userosscache
+*.userprefs
+*.dproj
+*.bdsproj
+*.sln.docstates
+Thumbs.db
+Desktop.ini
+
+# Code Analysis
+*.ruleset
+*.ruleset.cache
+*.DotSettings
+
+# Test Results
+TestResults/
+[Tt]est[Rr]esult*/
+*.TestResults.xml
+__pycache__/
+
+# NuGet
+*.nupkg
+**/packages/*
+*.nuget.targets
+*.nuget.props
+project.lock.json
+*.booproj
+
+# Webpack
+node_modules/
+npm-debug.log
