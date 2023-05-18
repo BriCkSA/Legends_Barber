@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "Rylrb9246sl73RMIUK5bFA8Jne1uxbh5WaykBOz3ikmhuymmtCAOCGNU1GQN6eWeKmdVN6xCjcMzLEaCjAWRsQ==",
+  "dgSpecHash": "TK09bkREJHoUxl+weHKaDy0j43xMvJWBXnAW5B1reO2w+kfUPwUbyPT7K9jUrcSi79ubc2Rr70KxJ9l1sMj5VQ==",
   "success": true,
-  "projectFilePath": "C:\\Users\\menut\\Documents\\Legends_Barber_API\\Legends_Barber_API\\Legends_Barber_API.csproj",
+  "projectFilePath": "C:\\Users\\menut\\Documents\\GitHub\\Legends_Barber\\Legends_Barber_API\\Legends_Barber_API\\Legends_Barber_API.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\menut\\.nuget\\packages\\azure.core\\1.24.0\\azure.core.1.24.0.nupkg.sha512",
     "C:\\Users\\menut\\.nuget\\packages\\azure.identity\\1.6.0\\azure.identity.1.6.0.nupkg.sha512",

@@ -19,11 +19,7 @@ if (app.Environment.IsDevelopment())
 }
 
 // Add default user agent header to IHttpClientFactory for scaffolding
-app.Services
-    .GetRequiredService<IHttpClientFactory>()
-    .CreateClient("Microsoft.EntityFrameworkCore.Tools")
-    .DefaultRequestHeaders
-    .Add("User-Agent", "Visual Studio");
+
 
 app.UseHttpsRedirection();
 app.UseAuthorization();

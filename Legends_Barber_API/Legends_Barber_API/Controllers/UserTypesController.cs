@@ -1,26 +1,50 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Legends_Barber_API.Models;
+using Microsoft.AspNetCore.Mvc;
 
 // For more information on enabling Web API for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
 
 namespace Legends_Barber_API.Controllers
 {
-    [Route("api/[controller]")]
+    [Route("api/usertypes")]
     [ApiController]
     public class UserTypesController : ControllerBase
     {
-        // GET: api/<UserTypesController>
+        LegendsBarbershopDbContext db = new LegendsBarbershopDbContext();
+        [Route("GetUserType")]
         [HttpGet]
-        public IEnumerable<string> Get()
+        public List<UserType> GetUserType()
         {
-            return new string[] { "value1", "value2" };
+            // db.Configuration.ProxyCreationEnabled = false;
+            return db.UserTypes.Select(zz => new UserType
+            {
+               Id = zz.Id,
+               TypeName = zz.TypeName
+              
+            }).ToList();
         }
 
-        // GET api/<UserTypesController>/5
-        [HttpGet("{id}")]
-        public string Get(int id)
+
+        //Get User Type By ID
+        [Route("GetUserTypeByID/{id:int}")]
+        [HttpGet]
+        public object GetUserTypeByID(int id)
         {
-            return "value";
+
+            // db.Configuration.ProxyCreationEnabled = false;
+
+
+            UserType cus = db.UserTypes.Find(id);
+            if (cus == null)
+            {
+                return NotFound();
+            }
+            return cus;
+
         }
+
+
+        //Add: User Type
+       
 
         // POST api/<UserTypesController>
         [HttpPost]

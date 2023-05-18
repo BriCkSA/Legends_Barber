@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\menut\\Documents\\Legends_Barber_API\\Legends_Barber_API\\Legends_Barber_API.csproj": {}
+    "C:\\Users\\menut\\Documents\\GitHub\\Legends_Barber\\Legends_Barber_API\\Legends_Barber_API\\Legends_Barber_API.csproj": {}
   },
   "projects": {
-    "C:\\Users\\menut\\Documents\\Legends_Barber_API\\Legends_Barber_API\\Legends_Barber_API.csproj": {
+    "C:\\Users\\menut\\Documents\\GitHub\\Legends_Barber\\Legends_Barber_API\\Legends_Barber_API\\Legends_Barber_API.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\menut\\Documents\\Legends_Barber_API\\Legends_Barber_API\\Legends_Barber_API.csproj",
+        "projectUniqueName": "C:\\Users\\menut\\Documents\\GitHub\\Legends_Barber\\Legends_Barber_API\\Legends_Barber_API\\Legends_Barber_API.csproj",
         "projectName": "Legends_Barber_API",
-        "projectPath": "C:\\Users\\menut\\Documents\\Legends_Barber_API\\Legends_Barber_API\\Legends_Barber_API.csproj",
+        "projectPath": "C:\\Users\\menut\\Documents\\GitHub\\Legends_Barber\\Legends_Barber_API\\Legends_Barber_API\\Legends_Barber_API.csproj",
         "packagesPath": "C:\\Users\\menut\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\menut\\Documents\\Legends_Barber_API\\Legends_Barber_API\\obj\\",
+        "outputPath": "C:\\Users\\menut\\Documents\\GitHub\\Legends_Barber\\Legends_Barber_API\\Legends_Barber_API\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\menut\\AppData\\Roaming\\NuGet\\NuGet.Config",
