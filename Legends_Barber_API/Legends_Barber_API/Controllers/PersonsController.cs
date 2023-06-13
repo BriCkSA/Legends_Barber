@@ -73,12 +73,22 @@ namespace Legends_Barber_API.Controllers
 
              };
 
-             try
+       
+
+            try
              {
                  db.People.Add(newPerson);
                  db.SaveChanges();
 
-             
+                Booking newBooking = new Booking
+                {
+                    BookingDate = DateTime.Now,
+                    PersonId = newPerson.Id,
+
+                };
+                db.Bookings.Add(newBooking);
+                db.SaveChanges();
+
                 response.status = 200;
                 response.message = "Success";
                 response.Data = newPerson.Id;

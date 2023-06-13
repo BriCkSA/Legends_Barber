@@ -1,4 +1,6 @@
-﻿namespace Legends_Barber_API.View_Models
+﻿using Legends_Barber_API.Models;
+
+namespace Legends_Barber_API.View_Models
 {
     public class BookingVM
     {
@@ -10,5 +12,6 @@
         public int? ShopId { get; set; }
 
         public int? PersonId { get; set; }
+        public Person Person { get; set; }
     }
 }
