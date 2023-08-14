@@ -1,5 +1,8 @@
 import { Component,OnInit } from '@angular/core';
-import { BookingsService } from './booking-service.service';
+import { BookingsService } from './bookings/booking-service.service';
+import { NavigationEnd, Router } from '@angular/router';
+import { CommonModule } from '@angular/common';
+
 
 @Component({
   selector: 'app-root',
@@ -12,21 +15,16 @@ export class AppComponent {
 
 bookings!: any[];
 
-  constructor(private bookingsService: BookingsService) { }
+  constructor(private router: Router) { }
 
   ngOnInit() {
-    this.getBookings();
+    this.router.events.subscribe((event) => {
+      if (event instanceof NavigationEnd && this.router.navigated === false) {
+        this.router.navigate(['/appointments']);
+      }
+    });
   }
 
-  getBookings() {
-    this.bookingsService.getBookings().subscribe(
-      (data) => {
-        this.bookings = data;
-        console.log(this.bookings);
-      },
-      (error) => {
-        console.error('Error fetching bookings:', error);
-      }
-    );
-  }
+
+  
 }

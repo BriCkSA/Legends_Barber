@@ -1,23 +1,2 @@
 
-<div style="padding: 5%;">
-  <h1 class="h1 display-1 text-center ">Appointments</h1>
-<table class="table position-absolute top-0 start-50 translate-middle-x"  style="margin-top: 16%; width: 50%;">
-  <thead>
-    <tr>
-      <th scope="col">#</th>
-      <th scope="col">First</th>
-      <th scope="col">Last</th>
-      <th scope="col">Handle</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr *ngFor="let item of bookings">
-      <th scope="row">{{ item.id }}</th>
-      <td>{{ item.bookingId    }}</td>
-      <td>{{ item.bookingDate  }}</td>
-      <td>{{ item.person.name }}</td>
-    </tr>
-  </tbody>
-</table>
-
-</div>
+<router-outlet></router-outlet>

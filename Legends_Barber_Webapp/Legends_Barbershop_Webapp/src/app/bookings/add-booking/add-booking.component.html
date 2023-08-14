@@ -1,0 +1,15 @@
+<div>
+    <form class="form-inline" (ngSubmit)="GetClient(mobileno.value)">
+
+        <div class="form-group mx-sm-3 mb-2">
+          <label for="inputPassword2" class="sr-only">Number</label>
+          <input type="tel" class="form-control" id="mobileno" placeholder="Mobile Number" #mobileno>
+        </div>
+        <button type="button" (click)="GetClient(mobileno.value)" class="btn btn-primary mb-2">Search</button>
+      </form>
+</div>
+
+<div [ngIf]="exists == true">
+
+    <h1>Confirm User details</h1>
+</div>

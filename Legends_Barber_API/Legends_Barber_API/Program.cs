@@ -1,5 +1,18 @@
+using Microsoft.AspNetCore.Builder;
+
+
 var builder = WebApplication.CreateBuilder(args);
 
+builder.Services.AddCors(options =>
+{
+    options.AddPolicy("AllowSpecificOrigin",
+        builder =>
+        {
+            builder.WithOrigins("http://localhost:4200") // Replace with your Angular app's URL
+                   .AllowAnyMethod()
+                   .AllowAnyHeader();
+        });
+});
 // Disable certificate validation
 System.Net.ServicePointManager.ServerCertificateValidationCallback +=
     (sender, cert, chain, sslPolicyErrors) => true;
@@ -11,6 +24,7 @@ builder.Services.AddSwaggerGen();
 
 var app = builder.Build();
 
+app.UseCors("AllowSpecificOrigin");
 // Configure the HTTP request pipeline
 if (app.Environment.IsDevelopment())
 {

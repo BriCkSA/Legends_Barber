@@ -1,0 +1,24 @@
+<div style="padding: 5%;">
+    <h1 class="h1 display-1 text-center ">Appointments</h1>
+  
+    <button class="btn btn-success position-absolute start-50 translate-middle-x" (click)="goToBooking()">Book</button>
+  <table class="table position-absolute top-0 start-50 translate-middle-x"  style="margin-top: 16%; width: 50%;">
+    <thead>
+      <tr>
+    
+        <th scope="col">Names</th>
+        <th scope="col">Time</th>
+  
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let item of bookings">
+        <!-- <th scope="row">{{ item.id }}</th> -->
+     
+        <td>{{ item.person.name }} {{ item.person.surname}}</td>
+        <td>{{item.bookingDate}}</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  </div>
