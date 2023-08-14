@@ -1,8 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { BookingsService } from '../booking-service.service';
 import { Router } from '@angular/router';
-import { CommonModule } from '@angular/common';
-import { FormsModule } from '@angular/forms';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 
 
 @Component({
@@ -13,7 +12,16 @@ import { FormsModule } from '@angular/forms';
 export class AddBookingComponent implements OnInit {
 
   exists : boolean = false;
-  constructor(private bookingsService: BookingsService,private router: Router) { }
+  userForm!: FormGroup;
+  constructor(private bookingsService: BookingsService,private router: Router,private fb: FormBuilder) { 
+
+    this.userForm = this.fb.group({
+      firstName: ['', Validators.required],
+      lastName: ['', Validators.required],
+      email: ['', [Validators.required, Validators.email]],
+      // Add more form controls here
+    });
+  }
 
   ngOnInit(): void {
   }
@@ -23,13 +31,26 @@ export class AddBookingComponent implements OnInit {
     this.bookingsService.getClient(num).subscribe(
       (data) => {
       
-        console.log(data);
+        console.log(data['data']);
+        var response = data['data'];
+
+        this.userForm.setValue({
+          firstName: response['name'],
+          lastName: response['surname'],
+          email: response['email']
+        });
         this.exists = true;
       },
       (error) => {
         console.error('Error fetching client:', error);
       }
     );
+  }
+
+  submitForm() {
+    if (this.userForm.valid) {
+      // Process the form data here
+    }
   }
 
 }
